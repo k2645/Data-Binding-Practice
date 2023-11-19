@@ -6,7 +6,7 @@
 //
 
 
-// Model
+//  Model
 import Foundation
 
 struct Clock {

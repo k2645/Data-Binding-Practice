@@ -6,7 +6,7 @@
 //
 
 
-// View
+//  View
 import UIKit
 
 class ClockViewController: UIViewController {
@@ -15,16 +15,24 @@ class ClockViewController: UIViewController {
     @IBOutlet weak var observerTimeLabel: UILabel!
     @IBOutlet weak var combineTimeLabel: UILabel!
     
+    private var viewModel = ClockViewModel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        setBindings()
         startTimer()
     }
 
     func startTimer() {
-        Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { _ in
-            
+        Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { [weak self] _ in
+            self?.viewModel.checkTime()
+        }
+    }
+    
+    func setBindings() {
+        viewModel.didChangeTime = { [weak self] viewModel in
+            self?.closureTimeLabel.text = viewModel.closureTime
         }
     }
 
