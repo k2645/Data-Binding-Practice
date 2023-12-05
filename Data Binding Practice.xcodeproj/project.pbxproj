@@ -15,6 +15,7 @@
 		A80B816B2B0A401F00AA3D6F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A80B81692B0A401F00AA3D6F /* LaunchScreen.storyboard */; };
 		A80B81772B0A40ED00AA3D6F /* Clock.swift in Sources */ = {isa = PBXBuildFile; fileRef = A80B81762B0A40ED00AA3D6F /* Clock.swift */; };
 		A80B81792B0A40FB00AA3D6F /* ClockViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A80B81782B0A40FB00AA3D6F /* ClockViewModel.swift */; };
+		A80B817B2B15FDFE00AA3D6F /* Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A80B817A2B15FDFE00AA3D6F /* Observable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		A80B816C2B0A401F00AA3D6F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A80B81762B0A40ED00AA3D6F /* Clock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Clock.swift; sourceTree = "<group>"; };
 		A80B81782B0A40FB00AA3D6F /* ClockViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClockViewModel.swift; sourceTree = "<group>"; };
+		A80B817A2B15FDFE00AA3D6F /* Observable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observable.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +68,7 @@
 				A80B81722B0A40B200AA3D6F /* Views */,
 				A80B815E2B0A401D00AA3D6F /* AppDelegate.swift */,
 				A80B81602B0A401D00AA3D6F /* SceneDelegate.swift */,
+				A80B817A2B15FDFE00AA3D6F /* Observable.swift */,
 				A80B81672B0A401F00AA3D6F /* Assets.xcassets */,
 				A80B81692B0A401F00AA3D6F /* LaunchScreen.storyboard */,
 				A80B816C2B0A401F00AA3D6F /* Info.plist */,
@@ -180,6 +183,7 @@
 				A80B815F2B0A401D00AA3D6F /* AppDelegate.swift in Sources */,
 				A80B81772B0A40ED00AA3D6F /* Clock.swift in Sources */,
 				A80B81612B0A401D00AA3D6F /* SceneDelegate.swift in Sources */,
+				A80B817B2B15FDFE00AA3D6F /* Observable.swift in Sources */,
 				A80B81792B0A40FB00AA3D6F /* ClockViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

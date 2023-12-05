@@ -10,7 +10,7 @@
 import Foundation
 
 struct Clock {
-    static var currentTime: (() -> String) = {
+    static var currentTime: () -> String = {
         let today = Date()
         
         let hours = Calendar.current.component(.hour, from: today)

@@ -8,6 +8,7 @@
 
 //  View
 import UIKit
+import Combine
 
 class ClockViewController: UIViewController {
 
@@ -17,6 +18,8 @@ class ClockViewController: UIViewController {
     
     // 뷰 모델 인스턴스 생성
     private var viewModel = ClockViewModel()
+    
+    private var cancellables: Set<AnyCancellable> = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -38,6 +41,13 @@ class ClockViewController: UIViewController {
         viewModel.didChangeTime = { [weak self] viewModel in
             self?.closureTimeLabel.text = viewModel.closureTime
         }
+        viewModel.observerTime.bind { [weak self] time in
+            self?.observerTimeLabel.text = time
+        }
+        viewModel.$combineTime
+            .compactMap { String($0) }
+            .assign(to: \.text, on: combineTimeLabel)
+            .store(in: &cancellables)
     }
 
 }
